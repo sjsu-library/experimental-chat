@@ -19,8 +19,8 @@ with st.form("my_form"):
     submitted = st.form_submit_button("Submit")
     if submitted:
         st.write("slider", slider_val, "query", text_val, "checkbox", checkbox_val)
-        resp = llm.complete("Write a poem about a magic backpack")
-        st.write(resp)
+        resp = llm.complete(text_val)
+        st.write(resp.text)
 
 st.write("Outside the form")
 
