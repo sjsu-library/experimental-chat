@@ -13,12 +13,11 @@ with st.form("my_form"):
     st.write("Inside the form")
     slider_val = st.slider("Temperature", min_value=0.0, max_value=1.0, step=.1)
     text_val = st.text_area("Query")
-    checkbox_val = st.checkbox("Form checkbox")
 
     # Every form must have a submit button.
     submitted = st.form_submit_button("Submit")
     if submitted:
-        st.write("slider", slider_val, "query", text_val, "checkbox", checkbox_val) 
+        st.write("temperature", slider_val, "query", text_val) 
         llm = Gemini(model="models/gemini-1.5-flash", api_key=st.secrets.google_gemini_key, temperature=slider_val)
         i = 0
         while i < 11:
