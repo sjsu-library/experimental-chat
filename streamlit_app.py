@@ -9,7 +9,7 @@ st.title("Return Multiple Responses")
 
 with st.form("my_form"):
     st.write("Inside the form")
-    slider_val = st.slider("Form slider")
+    slider_val = st.slider("Form slider", max_value=1)
     checkbox_val = st.checkbox("Form checkbox")
 
     # Every form must have a submit button.
