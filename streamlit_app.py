@@ -18,7 +18,7 @@ with st.form("my_form"):
     submitted = st.form_submit_button("Submit")
     if submitted:
         st.write("temperature", slider_val, "query", text_val) 
-        llm = Gemini(model="models/gemini-1.5-flash", api_key=st.secrets.google_gemini_key, temperature=slider_val)
+        llm = Gemini(model="models/gemini-1.5-flash", api_key=st.secrets.google_gemini_key, temperature=slider_val, system_prompt="Keep your response short")
         i = 0
         while i < 11:
             resp = llm.complete(text_val)
