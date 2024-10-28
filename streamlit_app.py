@@ -11,8 +11,8 @@ st.title("Return Multiple Responses")
 
 with st.form("my_form"):
     st.write("Inside the form")
-    temp_val = st.slider("Temperature", min_value=0.0, max_value=1.0, step=.1)
-    topk_val = st.slider("Tokens Considered", min_value=1, max_value=10, step=1)
+    temp_val = st.slider("Temperature", min_value=0.0, max_value=2.0, step=.1)
+    topk_val = st.slider("Tokens Considered", min_value=1, max_value=100, step=1)
     text_val = st.text_area("Query")
 
     # Every form must have a submit button.
