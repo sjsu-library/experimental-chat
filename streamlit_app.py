@@ -9,7 +9,7 @@ st.title("Return Multiple Responses")
 
 with st.form("my_form"):
     st.write("Inside the form")
-    slider_val = st.slider("Temperature", max_value=1, step=.1)
+    slider_val = st.slider("Temperature", max_value=1.0, step=.1)
     text_val = st.text_area("Query")
     checkbox_val = st.checkbox("Form checkbox")
 
