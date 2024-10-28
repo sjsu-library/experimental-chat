@@ -20,7 +20,10 @@ with st.form("my_form"):
     if submitted:
         st.write("slider", slider_val, "query", text_val, "checkbox", checkbox_val)
         resp = llm.complete(text_val)
-        st.write(resp.text)
+        i = 0
+        while i < 11:
+            st.write(resp.text)
+            i +=1
 
 st.write("Outside the form")
 
