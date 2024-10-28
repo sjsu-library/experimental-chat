@@ -18,10 +18,10 @@ with st.form("my_form"):
     # Every form must have a submit button.
     submitted = st.form_submit_button("Submit")
     if submitted:
-        st.write("slider", slider_val, "query", text_val, "checkbox", checkbox_val)
-        resp = llm.complete(text_val)
+        st.write("slider", slider_val, "query", text_val, "checkbox", checkbox_val) 
         i = 0
         while i < 11:
+            resp = llm.complete(text_val)
             st.write(resp.text)
             i +=1
 
