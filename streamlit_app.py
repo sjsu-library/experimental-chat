@@ -33,6 +33,7 @@ with st.form("my_form"):
             #resp = llm.complete(text_val)
             resp = model.generate_content(text_val)
             st.write(resp.text)
+            st.divider()
             i +=1
 
 st.write("Outside the form")
