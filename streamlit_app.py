@@ -26,12 +26,8 @@ with st.form("my_form"):
         #llm = Gemini(model="models/gemini-1.5-flash", api_key=st.secrets.google_gemini_key, temperature=temp_val, topK = topk_val, topP = 1.0)
         model = genai.GenerativeModel(
             'gemini-1.5-flash',
-            generation_config=(
-            "max_output_tokens":2000,
-            "temperature":temp_val,
-            "topK":topk_val,
-            "topP":topp_val,
-        ))
+            generation_config={'max_output_tokens':2000,'temperature':temp_val,'topK':topk_val,'topP':topp_val }
+        )
         i = 0
         while i < 11:
             #resp = llm.complete(text_val)
