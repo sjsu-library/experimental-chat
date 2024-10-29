@@ -29,8 +29,8 @@ with st.form("my_form"):
             generation_config=genai.GenerationConfig(
             max_output_tokens=2000,
             temperature=temp_val,
-            topK=topk_val,
-            topP=topp_val,
+            "topK"=topk_val,
+            "topP"=topp_val,
         ))
         i = 0
         while i < 11:
