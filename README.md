@@ -3,4 +3,4 @@ This is a very simple chat application with one twist: for every request, the ap
 
 This application is configured to use Google Gemini as the LLM.
 
-[Try the application on Streamlit Community Cloud] (https://experimental-chat.streamlit.app/)
+[Try the application on Streamlit Community Cloud](https://experimental-chat.streamlit.app/)
