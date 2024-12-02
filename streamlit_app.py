@@ -7,12 +7,11 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 st.set_page_config(page_title="10x Chatbot", page_icon="🐇", layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.title("10x Chatbot")
-st.write("This application queries Google Gemini ten times for each prompt. This can be helpful in demonstrating the effects of temperature and other parameters that control randomness.")
-
+st.write("This application queries Google Gemini ten times for each prompt. This can be helpful in demonstrating the effects of temperature and other parameters that control randomness. The different controls interact with one another - try moving all three all the way to the right to see the most randomness.")
+st.write("&larr; Less Random ---- More Random &rarr;")
 
 #create a form
 with st.form("my_form"):
-    st.write("&larr; Less Random - More Random &rarr;")
     #form controls for temperature, topK, topP, and query
     temp_val = st.slider("Temperature", help="Temperature controls the degree of randomness in token selection. Temperature only has an effect when the other parameters are set to allow more than one token to be considered.", min_value=0.0, max_value=2.0, step=.1)
     topk_val = st.slider("Tokens Considered (Top-K)", help="Tokens considered (top-K) changes how the model selects possible tokens. A top-K of 1 means the model will only consider the most probable among all tokens in the model's vocabulary, while a top-K of 3 means that each token is selected from among the three most probable tokens.", min_value=1, max_value=100, step=1) 
