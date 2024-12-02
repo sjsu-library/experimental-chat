@@ -8,6 +8,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 st.set_page_config(page_title="10x Chatbot", page_icon="🐇", layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.title("10x Chatbot")
 st.write("This application queries Google Gemini ten times for each prompt. This can be helpful in demonstrating the effects of temperature and other parameters that control randomness.")
+st.write("&larr; Less Random - More Random &rarr;")
 
 #create a form
 with st.form("my_form"):
