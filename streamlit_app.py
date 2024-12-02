@@ -12,9 +12,9 @@ st.write("This application queries Google Gemini ten times for each prompt. This
 #create a form
 with st.form("my_form"):
     #form controls for temperature, topK, topP, and query
-    temp_val = st.slider("Temperature", help="The amount of randomness", min_value=0.0, max_value=2.0, step=.1)
-    topk_val = st.slider("Tokens Considered", min_value=1, max_value=100, step=1)
-    topp_val = st.slider("Top P", min_value=0.0, max_value=1.0, step=0.05)
+    temp_val = st.slider("Temperature", help="Temperature controls the degree of randomness in token selection. Temperature only has an effect when the other parameters are set to allow more than one token to be considered.", min_value=0.0, max_value=2.0, step=.1)
+    topk_val = st.slider("Tokens Considered", help="Tokens considered (top-K) changes how the model selects tokens for output. A top-K of 1 means the next selected token is the most probable among all tokens in the model's vocabulary, while a top-K of 3 means that the next token is selected from among the three most probable tokens.", min_value=1, max_value=100, step=1) 
+    topp_val = st.slider("Top-P", help="Top-P changes how the model selects tokens for output. Tokens are selected from the most (see top-K) to least probable until the sum of their probabilities equals the top-P value. For example, if tokens A, B, and C have a probability of 0.3, 0.2, and 0.1 and the top-P value is 0.5, then the model will select either A or B as the next token by using temperature and excludes C as a candidate.",min_value=0.0, max_value=1.0, step=0.05)
     text_val = st.text_area("Query")
 
     # Every form must have a submit button.
