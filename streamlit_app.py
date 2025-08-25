@@ -22,7 +22,7 @@ with st.form("my_form"):
     if submitted:
         # set LLM parameters
         model = genai.GenerativeModel(
-            'gemini-1.5-flash',
+            'gemini-2.5-flash',
             generation_config={'max_output_tokens':100,'temperature':temp_val,'top_k':topk_val,'top_p':topp_val }
         )
         i = 0
