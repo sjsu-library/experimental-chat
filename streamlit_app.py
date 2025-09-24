@@ -32,7 +32,7 @@ with st.form("my_form"):
             #get response from LLM
             resp = model.generate_content(text_val)
             #write response to the page - need to add error catching here for harmful content
-            st.write(resp.text)
+            st.write(resp)
             st.divider()
             i +=1
 
