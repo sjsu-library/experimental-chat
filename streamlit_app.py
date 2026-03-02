@@ -8,7 +8,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 st.set_page_config(page_title="AI Bias Explorer", page_icon="🔍", layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.image("dhc_banner.png")
 st.title("AI Bias Explorer")
-st.write("This application queries Google Gemini ten times for each prompt. This can be helpful in demonstrating the effects of temperature and other parameters that control randomness. The different controls interact with one another - try moving all three all the way to the right to see the most randomness.")
+st.write("This application queries Google Gemini ten times for each prompt while allowing the user to control the amount of randomness present in the responses. This can be helpful not only in demonstrating the effects of temperature and other parameters that control randomness, but also in identifying prompts that elicit biased responses from the LLM.")
 st.write("&larr; Less Random ---- More Random &rarr;")
 
 #create a form
